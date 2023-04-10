@@ -76,9 +76,18 @@ spec:
     - env
     image: ubuntu
     name: env
+  - name: build-and-push-1
+    image: ubuntu
+    command:
+    - /bin/bash
+    args:
+    - -c
+    - |
+      set -ex
+      find /workspace
   - args:
     - -c
-    - echo stuff > file; ls; echo "some more"; cat file
+    - cd /workspace; echo stuff > file; ls; echo "some more"; cat file
     command:
     - /bin/bash
     image: ubuntu
