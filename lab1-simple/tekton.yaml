@@ -107,5 +107,5 @@ spec:
     - -c
     - |
       set -ex
-      find /workspace | xargs cat
+      find -f /workspace/* | xargs cat -n
 
