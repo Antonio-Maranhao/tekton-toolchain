@@ -178,3 +178,15 @@ spec:
           echo hi >> hi
           ls $WS
           cat hi
+    - name: addhi-workspace-root
+      image: ubuntu
+      command: ["/bin/bash", "-c"]
+      args:
+        - |
+          set -x
+          echo 02 lab3
+          ls /workspaces
+          cd /workspaces
+          echo hi-there >> hi.txt
+          ls /workspaces
+          cat hi.txt
