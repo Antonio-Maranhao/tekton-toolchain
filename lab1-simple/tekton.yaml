@@ -94,8 +94,18 @@ spec:
     name: write
   - args:
     - -l
+    - /workspace
     command:
     - ls
     image: ubuntu
-    name: lsafterfilemissing
+    name: ls-workspace
+  - name: print-workspace
+    image: ubuntu
+    command:
+    - /bin/bash
+    args:
+    - -c
+    - |
+      set -ex
+      find /workspace | xargs cat
 
