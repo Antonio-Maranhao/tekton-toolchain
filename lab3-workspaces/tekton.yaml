@@ -185,8 +185,8 @@ spec:
         - |
           set -x
           echo 02 lab3
-          ls /workspaces
-          cd /workspaces
+          ls -l /workspace
+          cd /workspace
           echo hi-there >> hi.txt
-          ls /workspaces
+          ls /workspace
           cat hi.txt
